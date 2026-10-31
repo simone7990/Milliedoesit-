@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILLI DOES IT - Landscape & Snow Removal | Philadelphia & Surrounding Areas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,900&family=Orbitron:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0284c7',
+                            deepBlue: '#031b33',
+                            electric: '#00aaff',
+                            glow: '#38bdf8',
+                            dark: '#050a15',
+                            card: '#0a1326',
+                            silver: '#e2e8f0',
+                            accentGreen: '#10b981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Hexagon & Carbon Texture Styling from flyer */
+        .carbon-bg {
+            background-color: #040812;
+            background-image: 
+                linear-gradient(rgba(4, 8, 18, 0.92), rgba(5, 10, 21, 0.96)),
+                radial-gradient(circle at 50% 20%, rgba(0, 170, 255, 0.25) 0%, transparent 60%),
+                radial-gradient(rgba(0, 170, 255, 0.12) 15%, transparent 16%),
+                radial-gradient(rgba(255, 255, 255, 0.05) 15%, transparent 16%);
+            background-size: 100% 100%, 100% 100%, 20px 20px, 20px 20px;
+            background-position: 0 0, 0 0, 0 0, 10px 10px;
+        }
+
+        /* Metallic Chrome Header Effect - Replicating Flyer Title */
+        .chrome-text {
+            background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 35%, #94a3b8 48%, #334155 52%, #cbd5e1 70%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 12px rgba(0, 170, 255, 0.6)) drop-shadow(0 4px 6px rgba(0,0,0,0.9));
+        }
+
+        .chrome-subtext {
+            background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 50%, #64748b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Metallic Glowing Cards */
+        .flyer-card {
+            background: linear-gradient(145deg, rgba(10, 19, 38, 0.95), rgba(4, 8, 18, 0.98));
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 170, 255, 0.3);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .flyer-card:hover {
+            border-color: rgba(0, 170, 255, 0.7);
+            box-shadow: 0 12px 35px -5px rgba(0, 170, 255, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Metallic Button Effect */
+        .btn-metallic {
+            background: linear-gradient(180deg, #00bfff 0%, #0066cc 50%, #003388 100%);
+            box-shadow: 0 4px 15px rgba(0, 170, 255, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-metallic:hover {
+            background: linear-gradient(180deg, #33ccff 0%, #0088ff 50%, #0044aa 100%);
+            box-shadow: 0 6px 22px rgba(0, 170, 255, 0.7), inset 0 1px 2px rgba(255, 255, 255, 1);
+            transform: translateY(-1px);
+        }
+
+        /* Emblem Circle Styling from flyer icons */
+        .icon-emblem {
+            background: radial-gradient(circle at 30% 30%, #1e293b, #040812);
+            border: 2px solid rgba(0, 170, 255, 0.6);
+            box-shadow: 0 0 12px rgba(0, 170, 255, 0.3), inset 0 0 8px rgba(0, 170, 255, 0.2);
+        }
+
+        /* Glowing Blue Border Frame */
+        .glow-frame {
+            border: 2px solid rgba(0, 170, 255, 0.5);
+            box-shadow: 0 0 20px rgba(0, 170, 255, 0.25), inset 0 0 15px rgba(0, 170, 255, 0.15);
+        }
+
+        @media print {
+            body { background: white !important; color: black !important; }
+            header, footer, nav, .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            #worksheet-section { width: 100% !important; border: 2px solid #000 !important; background: white !important; color: black !important; }
+            input, select, textarea { border: 1px solid #ccc !important; color: black !important; background: white !important; }
+        }
+    </style>
+</head>
+<body class="carbon-bg text-gray-100 font-sans antialiased min-h-screen selection:bg-brand-electric selection:text-white pb-20 sm:pb-0">
+
+    <!-- TOP DISCLAIMER BAR -->
+    <div class="bg-gradient-to-r from-black via-brand-deepBlue to-black text-gray-200 text-xs py-2 px-4 text-center border-b border-brand-electric/40 shadow-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+            <i class="fa-solid fa-circle-info text-brand-electric"></i>
+            <p><strong>Preliminary Estimates Only:</strong> Scope, conditions, access & materials confirmed in writing prior to job start.</p>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-brand-electric/30 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo area mimicking logo typography -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-full icon-emblem flex items-center justify-center text-brand-electric text-xl font-bold group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-leaf text-brand-glow"></i>
+                </div>
+                <div>
+                    <span class="font-display font-black text-xl sm:text-2xl tracking-wider chrome-text block leading-none italic">MILLI</span>
+                    <span class="font-display font-bold text-xs sm:text-sm tracking-widest text-white block -mt-0.5">DOES IT</span>
+                </div>
+            </a>
+
+            <!-- Center Info -->
+            <div class="hidden md:flex items-center gap-6 text-xs">
+                <div class="text-right">
+                    <span class="text-gray-400 block"><i class="fa-solid fa-user text-brand-electric mr-1"></i> Jamille Diggins</span>
+                    <a href="mailto:jamillediggins@gmail.com" class="text-white hover:text-brand-electric font-semibold"><i class="fa-solid fa-envelope text-brand-electric mr-1"></i> jamillediggins@gmail.com</a>
+                </div>
+                <div class="h-8 w-px bg-white/10"></div>
+                <div>
+                    <span class="text-brand-accentGreen font-bold block"><i class="fa-solid fa-clock mr-1"></i> Available 24/7 By Arrangement</span>
+                    <span class="text-gray-300"><i class="fa-solid fa-location-dot text-brand-electric mr-1"></i> Philly & Surrounding Areas</span>
+                </div>
+            </div>
+
+            <!-- Call Now Action -->
+            <div class="flex items-center gap-3">
+                <a href="tel:2675217346" class="btn-metallic text-white font-extrabold px-4 sm:px-6 py-2.5 rounded-xl flex items-center gap-2 text-sm uppercase tracking-wide">
+                    <i class="fa-solid fa-phone text-amber-300"></i>
+                    <span class="hidden sm:inline">Mil:</span> 
+                    <span class="font-display text-base tracking-wider">267-521-7346</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION: REPLICATING THE EXACT GRAPHIC FLYER ARTWORK -->
+    <section class="relative pt-6 pb-12 px-4 max-w-7xl mx-auto">
+        <div class="glow-frame rounded-3xl overflow-hidden relative bg-brand-dark/90 shadow-2xl">
+            
+            <!-- SKYLINE & SPLIT SEASONAL HERO BANNER -->
+            <div class="relative h-64 sm:h-96 w-full overflow-hidden flex items-center justify-center">
+                <!-- Background Philadelphia Skyline & Split Landscape Art (SVG/Graphic Canvas Overlay) -->
+                <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" 
+                     style="background-image: url('https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?q=80&w=1600&auto=format&fit=crop');">
+                </div>
+
+                <!-- Gradient split summer (left) winter (right) overlay -->
+                <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/80 via-brand-dark/95 to-sky-950/80"></div>
+                
+                <!-- City skyline silhouette vector backdrop -->
+                <div class="absolute inset-x-0 bottom-0 h-40 bg-contain bg-bottom bg-repeat-x opacity-25 pointer-events-none"
+                     style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1200 120&quot;><path fill=&quot;%2300aaff&quot; d=&quot;M0,120 L0,90 L20,90 L20,120 L40,120 L40,60 L70,60 L70,120 L100,120 L100,40 L120,40 L120,120 L160,120 L160,80 L190,80 L190,120 L230,120 L230,20 L250,10 L270,20 L270,120 L320,120 L320,70 L350,70 L350,120 L400,120 L400,30 L430,30 L430,120 L480,120 L480,85 L520,85 L520,120 L580,120 L580,15 L600,5 L620,15 L620,120 L670,120 L670,50 L700,50 L700,120 L750,120 L750,75 L800,75 L800,120 L860,120 L860,35 L890,35 L890,120 L940,120 L940,65 L980,65 L980,120 L1040,120 L1040,25 L1070,25 L1070,120 L1200,120 L1200,120 Z&quot;/></svg>');">
+                </div>
+
+                <!-- Floating Mower / Snow Plow Graphics Indicators -->
+                <div class="absolute left-4 bottom-4 hidden lg:flex items-center gap-3 bg-brand-dark/80 p-3 rounded-2xl border border-emerald-500/40 backdrop-blur">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-tractor"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-emerald-400 uppercase block">Summer Lawn Care</span>
+                        <span class="text-[11px] text-gray-300">Precision Mowing & Trim</span>
+                    </div>
+                </div>
+
+                <div class="absolute right-4 bottom-4 hidden lg:flex items-center gap-3 bg-brand-dark/80 p-3 rounded-2xl border border-sky-500/40 backdrop-blur">
+                    <div>
+                        <span class="text-xs font-bold text-sky-400 uppercase block text-right">Winter Snow Removal</span>
+                        <span class="text-[11px] text-gray-300">Truck Plowing & De-Icing</span>
+                    </div>
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-truck-monster"></i>
+                    </div>
+                </div>
+
+                <!-- MAIN BRAND LOGO HEADER OVERLAY -->
+                <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                    <!-- Leaf Badge Top -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-brand-electric/20 border border-brand-electric/50 text-brand-glow text-xs font-bold uppercase tracking-widest mb-2 shadow-lg backdrop-blur">
+                        <i class="fa-solid fa-leaf text-emerald-400"></i> Full Service Outdoor Care <i class="fa-solid fa-snowflake text-sky-300"></i>
+                    </div>
+
+                    <!-- Chrome Main Title -->
+                    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-display font-black tracking-tight chrome-text italic uppercase leading-none my-1">
+                        MILLI
+                    </h1>
+                    <div class="text-2xl sm:text-4xl font-display font-black text-white tracking-widest uppercase chrome-subtext mb-3">
+                        DOES IT
+                    </div>
+
+                    <!-- Main Service Oval Banner Frame -->
+                    <div class="inline-block bg-gradient-to-r from-brand-deepBlue via-brand-blue to-brand-deepBlue px-6 py-2.5 rounded-full border-2 border-brand-electric shadow-2xl">
+                        <h2 class="text-sm sm:text-xl font-display font-extrabold text-white tracking-wider uppercase">
+                            LANDSCAPE & SNOW REMOVAL
+                        </h2>
+                    </div>
+
+                    <p class="text-xs sm:text-sm font-bold text-brand-silver tracking-widest uppercase mt-3 drop-shadow">
+                        SERVING BUSINESS, RESIDENTIAL AND COMMERCIAL PROPERTIES
+                    </p>
+                </div>
+            </div>
+
+            <!-- 5 FLYER ICON BADGES (Directly matching bottom flyer row) -->
+            <div class="p-6 bg-brand-dark/95 border-t border-brand-electric/30">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+                    
+                    <button onclick="switchTab('lawn')" class="p-3 rounded-2xl bg-brand-card hover:bg-brand-electric/10 border border-white/10 hover:border-brand-electric transition-all group">
+                        <div class="w-12 h-12 mx-auto rounded-full icon-emblem flex items-center justify-center text-brand-electric text-xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase block">Lawn Care</span>
+                    </button>
+
+                    <button onclick="switchTab('landscaping')" class="p-3 rounded-2xl bg-brand-card hover:bg-brand-electric/10 border border-white/10 hover:border-brand-electric transition-all group">
+                        <div class="w-12 h-12 mx-auto rounded-full icon-emblem flex items-center justify-center text-brand-electric text-xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase block">Landscaping</span>
+                    </button>
+
+                    <button onclick="switchTab('maint')" class="p-3 rounded-2xl bg-brand-card hover:bg-brand-electric/10 border border-white/10 hover:border-brand-electric transition-all group">
+                        <div class="w-12 h-12 mx-auto rounded-full icon-emblem flex items-center justify-center text-brand-electric text-xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase block">Property Maintenance</span>
+                    </button>
+
+                    <button onclick="switchTab('snow')" class="p-3 rounded-2xl bg-brand-card hover:bg-brand-electric/10 border border-white/10 hover:border-brand-electric transition-all group">
+                        <div class="w-12 h-12 mx-auto rounded-full icon-emblem flex items-center justify-center text-brand-electric text-xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase block">Snow Removal</span>
+                    </button>
+
+                    <button onclick="switchTab('snow')" class="col-span-2 sm:col-span-1 p-3 rounded-2xl bg-brand-card hover:bg-brand-electric/10 border border-white/10 hover:border-brand-electric transition-all group">
+                        <div class="w-12 h-12 mx-auto rounded-full icon-emblem flex items-center justify-center text-brand-electric text-xl mb-2 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-icicles"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white uppercase block">Ice Management</span>
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- DIRECT CONTACT BAR FOOTER -->
+            <div class="bg-gradient-to-r from-brand-deepBlue via-brand-dark to-brand-deepBlue p-4 border-t border-brand-electric/30 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full icon-emblem flex items-center justify-center text-brand-electric text-lg">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-gray-400 uppercase block">Direct Owner Call / Text</span>
+                        <span class="font-display font-black text-xl text-white tracking-wider">Mil: 267-521-7346</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-3 no-print">
+                    <a href="tel:2675217346" class="btn-metallic text-white font-bold text-xs px-5 py-2.5 rounded-xl uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i> Call Now
+                    </a>
+                    <a href="sms:2675217346" class="bg-gray-800 hover:bg-gray-700 text-white font-bold text-xs px-5 py-2.5 rounded-xl border border-white/20 uppercase flex items-center gap-2">
+                        <i class="fa-solid fa-comment-sms text-brand-electric"></i> Text Mil
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NAVIGATION TABS -->
+    <section class="max-w-7xl mx-auto px-4 mb-8">
+        <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none no-print">
+            <button onclick="switchTab('all')" id="tab-all" class="tab-btn active bg-brand-electric text-brand-dark font-black px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider flex-shrink-0">
+                All Services
+            </button>
+            <button onclick="switchTab('lawn')" id="tab-lawn" class="tab-btn bg-brand-card hover:bg-white/10 text-gray-300 font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider border border-white/10 flex-shrink-0">
+                1. Lawn Care
+            </button>
+            <button onclick="switchTab('landscaping')" id="tab-landscaping" class="tab-btn bg-brand-card hover:bg-white/10 text-gray-300 font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider border border-white/10 flex-shrink-0">
+                2. Landscaping
+            </button>
+            <button onclick="switchTab('snow')" id="tab-snow" class="tab-btn bg-brand-card hover:bg-white/10 text-gray-300 font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider border border-white/10 flex-shrink-0">
+                3. Snow & Ice
+            </button>
+            <button onclick="switchTab('maint')" id="tab-maint" class="tab-btn bg-brand-card hover:bg-white/10 text-gray-300 font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider border border-white/10 flex-shrink-0">
+                4. Property Maint.
+            </button>
+            <button onclick="switchTab('worksheet')" id="tab-worksheet" class="tab-btn bg-brand-card hover:bg-white/10 text-amber-400 font-bold px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider border border-amber-500/30 flex-shrink-0">
+                <i class="fa-solid fa-calculator mr-1"></i> Estimate Worksheet (<span id="tab-cart-count">0</span>)
+            </button>
+        </div>
+    </section>
+
+    <!-- SERVICE LISTINGS & PRICE GUIDE -->
+    <section class="max-w-7xl mx-auto px-4 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- SERVICE CARDS (LEFT 8 COLS) -->
+            <div class="lg:col-span-8 space-y-8">
+
+                <!-- 1. LAWN CARE & ROUTINE MAINTENANCE -->
+                <div id="sec-lawn" class="service-group flyer-card rounded-2xl overflow-hidden border-l-4 border-l-emerald-500">
+                    <div class="p-5 bg-brand-dark/90 flex items-center justify-between border-b border-white/10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-extrabold text-lg sm:text-xl text-white uppercase">1. Lawn Care & Routine Maintenance</h3>
+                                <p class="text-xs text-gray-400">Regular cutting, trimming, edging, and seasonal lawn maintenance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-6 divide-y divide-white/10">
+                        
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Small city / rowhome lawn</h4>
+                                <p class="text-xs text-gray-400">Includes mow, trim, edge, and blow cleanup</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$40–$65 <span class="text-[10px] text-gray-400 font-sans">/ visit</span></span>
+                                <button onclick="addToCart('Small city / rowhome lawn', 40, 65)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Standard residential lawn</h4>
+                                <p class="text-xs text-gray-400">Full yard mowing, precision line trimming & power blowing</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$60–$95 <span class="text-[10px] text-gray-400 font-sans">/ visit</span></span>
+                                <button onclick="addToCart('Standard residential lawn', 60, 95)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Large lawn / 1/2 acre or more</h4>
+                                <p class="text-xs text-gray-400">Extensive lot mowing and boundary edging</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$100–$180+ <span class="text-[10px] text-gray-400 font-sans">/ visit</span></span>
+                                <button onclick="addToCart('Large lawn (1/2 acre+)', 100, 180)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Overgrown first cut / heavy growth</h4>
+                                <p class="text-xs text-gray-400">High turf or neglected lawn recovery cutting</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$90–$250+</span>
+                                <button onclick="addToCart('Overgrown first cut', 90, 250)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Weed pulling / light garden-bed cleanup</h4>
+                                <p class="text-xs text-gray-400">Manual garden bed weeding and flowerbed clearing</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$45–$85 <span class="text-[10px] text-gray-400 font-sans">/ labor hr</span></span>
+                                <button onclick="addToCart('Weed pulling / bed cleanup', 45, 85)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Hedge and shrub trimming</h4>
+                                <p class="text-xs text-gray-400">Bush shaping, hedge cutting, and clipping disposal</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$60–$150+ <span class="text-[10px] text-gray-400 font-sans">/ visit</span></span>
+                                <button onclick="addToCart('Hedge & shrub trimming', 60, 150)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Recurring weekly service</h4>
+                                <p class="text-xs text-gray-400">Quote after property review; special repeat-client discount rate</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-amber-400 text-xs uppercase">Quote On Review</span>
+                                <a href="tel:2675217346" class="bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs font-bold px-3.5 py-1.5 rounded-lg border border-white/10">
+                                    Call Mil
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 2. LANDSCAPING & SEASONAL CLEANUPS -->
+                <div id="sec-landscaping" class="service-group flyer-card rounded-2xl overflow-hidden border-l-4 border-l-teal-400">
+                    <div class="p-5 bg-brand-dark/90 flex items-center justify-between border-b border-white/10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-broom"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-extrabold text-lg sm:text-xl text-white uppercase">2. Landscaping & Seasonal Cleanups</h3>
+                                <p class="text-xs text-gray-400">Yard overhauls, mulching, flowerbeds, and debris hauling</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-6 divide-y divide-white/10">
+                        
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">General landscaping labor</h4>
+                                <p class="text-xs text-gray-400">Dedicated manual labor for custom outdoor projects</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$50–$75 <span class="text-[10px] text-gray-400 font-sans">/ labor hr</span></span>
+                                <button onclick="addToCart('General landscaping labor', 50, 75)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Small yard cleanup</h4>
+                                <p class="text-xs text-gray-400">Light leaf pickup, small stick and debris clearing</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$100–$200</span>
+                                <button onclick="addToCart('Small yard cleanup', 100, 200)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Medium yard cleanup</h4>
+                                <p class="text-xs text-gray-400">Moderate leaf removal, bed cleanup, debris bagging</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$200–$400</span>
+                                <button onclick="addToCart('Medium yard cleanup', 200, 400)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Large / heavy cleanup</h4>
+                                <p class="text-xs text-gray-400">Overgrown lots, extensive leaf piling, heavy branch pickup</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$400–$800+</span>
+                                <button onclick="addToCart('Large / heavy cleanup', 400, 800)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Leaf removal</h4>
+                                <p class="text-xs text-gray-400">Complete lawn & flower bed leaf vacuuming/blowing</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$150–$450+</span>
+                                <button onclick="addToCart('Leaf removal', 150, 450)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Mulch installation labor</h4>
+                                <p class="text-xs text-gray-400">Bed edging & spreading labor (mulch material billed extra)</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$75–$150 <span class="text-[10px] text-gray-400 font-sans">/ cu yd</span></span>
+                                <button onclick="addToCart('Mulch installation labor', 75, 150)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Planting / garden-bed refresh</h4>
+                                <p class="text-xs text-gray-400">Labor for new plants, shrubs, flowers (plus material costs)</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$150–$500+</span>
+                                <button onclick="addToCart('Planting / bed refresh', 150, 500)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Brush, branches, or yard-waste hauling</h4>
+                                <p class="text-xs text-gray-400">Loading & removal (plus local landfill disposal fees)</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">From $75</span>
+                                <button onclick="addToCart('Yard-waste hauling', 75, 150)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 3. SNOW & ICE REMOVAL -->
+                <div id="sec-snow" class="service-group flyer-card rounded-2xl overflow-hidden border-l-4 border-l-brand-glow">
+                    <div class="p-5 bg-brand-dark/90 flex items-center justify-between border-b border-white/10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-glow/20 text-brand-glow flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-extrabold text-lg sm:text-xl text-white uppercase">3. Snow & Ice Removal</h3>
+                                <p class="text-xs text-gray-400">Plowing, shoveling, de-icing, and emergency winter clearing</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-6 divide-y divide-white/10">
+                        
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Small front walk / short sidewalk</h4>
+                                <p class="text-xs text-gray-400">Quick clearance for city rowhomes and small entries</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$30–$50 <span class="text-[10px] text-gray-400 font-sans">/ visit</span></span>
+                                <button onclick="addToCart('Small front walk clearing', 30, 50)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Sidewalk and steps at typical home</h4>
+                                <p class="text-xs text-gray-400">Includes front steps, porch, and full walkway</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$40–$75 <span class="text-[10px] text-gray-400 font-sans">/ visit</span></span>
+                                <button onclick="addToCart('Sidewalk & steps clearing', 40, 75)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Residential driveway shoveling</h4>
+                                <p class="text-xs text-gray-400">Hand shoveling for residential vehicle driveways</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$45–$100 <span class="text-[10px] text-gray-400 font-sans">/ visit</span></span>
+                                <button onclick="addToCart('Residential driveway shoveling', 45, 100)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Driveway plowing (truck plow)</h4>
+                                <p class="text-xs text-gray-400">Truck plow clearing for long or double driveways</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$75–$150 <span class="text-[10px] text-gray-400 font-sans">/ visit</span></span>
+                                <button onclick="addToCart('Driveway truck plowing', 75, 150)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Salt / de-icer application</h4>
+                                <p class="text-xs text-gray-400">Calcium chloride or rock salt spreading to prevent ice</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$25–$60</span>
+                                <button onclick="addToCart('Salt / de-icer application', 25, 60)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-brand-electric/10 p-3 rounded-xl border border-brand-electric/30">
+                            <div>
+                                <h4 class="font-bold text-brand-glow text-sm"><i class="fa-solid fa-star text-amber-300 mr-1"></i> Combined Driveway + Sidewalk + Steps</h4>
+                                <p class="text-xs text-gray-300">Complete home winter protection package</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-glow text-sm">$90–$175+ <span class="text-[10px] text-gray-300 font-sans">/ visit</span></span>
+                                <button onclick="addToCart('Combined snow package', 90, 175)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add Package
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 4. PROPERTY MAINTENANCE & OTHER WORK -->
+                <div id="sec-maint" class="service-group flyer-card rounded-2xl overflow-hidden border-l-4 border-l-amber-400">
+                    <div class="p-5 bg-brand-dark/90 flex items-center justify-between border-b border-white/10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-extrabold text-lg sm:text-xl text-white uppercase">4. Property Maintenance & Handyman Work</h3>
+                                <p class="text-xs text-gray-400">Pressure washing, gutter clearing, storm cleanup, and after-hours work</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-6 divide-y divide-white/10">
+                        
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">General outdoor maintenance</h4>
+                                <p class="text-xs text-gray-400">Miscellaneous outdoor repairs and handyman labor</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$50–$75 <span class="text-[10px] text-gray-400 font-sans">/ labor hr</span></span>
+                                <button onclick="addToCart('General outdoor maintenance', 50, 75)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Storm debris cleanup</h4>
+                                <p class="text-xs text-gray-400">Fallen limb removal, windstorm damage clearing</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$100–$350+</span>
+                                <button onclick="addToCart('Storm debris cleanup', 100, 350)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Pressure washing (small area)</h4>
+                                <p class="text-xs text-gray-400">Patios, walkways, decks, or entryway power washing</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$100–$250+</span>
+                                <button onclick="addToCart('Pressure washing', 100, 250)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Gutter cleaning (accessible, single-story)</h4>
+                                <p class="text-xs text-gray-400">Removing leaves and flushing single-story gutters</p>
+                            </div>
+                            <div class="flex items-center justify-between sm:justify-end gap-3">
+                                <span class="font-display font-bold text-brand-electric text-sm">$100–$200+</span>
+                                <button onclick="addToCart('Gutter cleaning (single-story)', 100, 200)" class="btn-metallic text-white text-xs font-bold px-3.5 py-1.5 rounded-lg flex items-center gap-1">
+                                    <i class="fa-solid fa-plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SIDEBAR: LIVE WORKSHEET & PRICING POLICIES (RIGHT 4 COLS) -->
+            <div class="lg:col-span-4 space-y-6">
+                
+                <!-- LIVE WORKSHEET CART BOX -->
+                <div id="worksheet-section" class="flyer-card p-6 rounded-2xl border-2 border-brand-electric/60 sticky top-24">
+                    <div class="flex justify-between items-center border-b border-white/10 pb-4 mb-4">
+                        <h3 class="font-display font-black text-lg text-white flex items-center gap-2">
+                            <i class="fa-solid fa-calculator text-brand-electric"></i> Quick Estimator
+                        </h3>
+                        <span id="side-cart-badge" class="bg-brand-electric text-brand-dark font-black text-xs px-2.5 py-1 rounded-full">0 Items</span>
+                    </div>
+
+                    <!-- Cart List -->
+                    <div id="side-cart-list" class="space-y-2 max-h-52 overflow-y-auto pr-1 mb-4 text-xs text-gray-300">
+                        <p class="text-gray-500 italic text-center py-6">Click "+ Add" on any service to start your live estimate.</p>
+                    </div>
+
+                    <!-- Input Fields -->
+                    <div class="space-y-3 mb-4 text-xs">
+                        <div>
+                            <label class="block text-gray-400 font-bold mb-1">Customer Name / Phone</label>
+                            <input type="text" id="cust-name" placeholder="e.g. John - 267-555-0199" class="w-full bg-brand-dark border border-white/20 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-brand-electric">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 font-bold mb-1">Service Address</label>
+                            <input type="text" id="cust-address" placeholder="e.g. 1234 Market St, Philly" class="w-full bg-brand-dark border border-white/20 rounded-xl px-3 py-2 text-white focus:outline-none focus:border-brand-electric">
+                        </div>
+                    </div>
+
+                    <!-- Extra Checkboxes -->
+                    <div class="bg-brand-dark/80 p-3 rounded-xl border border-white/10 mb-4 space-y-2 text-xs">
+                        <label class="flex items-center gap-2 text-amber-300 font-semibold cursor-pointer">
+                            <input type="checkbox" id="chk-emergency" onchange="recalculate()" class="w-4 h-4 accent-amber-500 rounded">
+                            Emergency / After-Hours (+25%)
+                        </label>
+                        <label class="flex items-center gap-2 text-gray-300 cursor-pointer">
+                            <input type="checkbox" id="chk-materials" onchange="recalculate()" class="w-4 h-4 accent-brand-electric rounded">
+                            Include Materials / Salt / Mulch Est.
+                        </label>
+                    </div>
+
+                    <!-- Total Display -->
+                    <div class="bg-gradient-to-r from-brand-deepBlue to-brand-dark p-4 rounded-xl border border-brand-electric/40 mb-4 flex justify-between items-center">
+                        <div>
+                            <span class="text-[10px] font-bold text-gray-400 uppercase block">Estimated Base</span>
+                            <span id="side-total-range" class="font-display font-black text-xl text-brand-electric">$0.00</span>
+                        </div>
+                        <button onclick="clearCart()" class="text-xs text-red-400 hover:text-red-300 underline">Reset</button>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="space-y-2 no-print">
+                        <button onclick="sendSMS()" class="btn-metallic w-full text-white font-black py-3 rounded-xl text-xs uppercase flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-comment-sms"></i> Text Estimate To Mil
+                        </button>
+                        <button onclick="sendEmail()" class="w-full bg-brand-dark hover:bg-white/10 text-white font-bold py-2.5 rounded-xl text-xs uppercase border border-white/20 flex items-center justify-center gap-2 transition-all">
+                            <i class="fa-solid fa-paper-plane text-brand-electric"></i> Email Estimate
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: PRICING POLICIES TO PROTECT YOUR BUSINESS -->
+    <section class="py-12 px-4 max-w-7xl mx-auto">
+        <div class="flyer-card p-6 sm:p-10 rounded-3xl border border-brand-electric/40">
+            <div class="text-center mb-8">
+                <span class="text-xs font-bold text-brand-electric uppercase tracking-widest">Business Policies</span>
+                <h3 class="text-2xl sm:text-4xl font-display font-black chrome-text uppercase">5. Pricing Policies & Terms</h3>
+                <p class="text-gray-400 text-xs sm:text-sm mt-1 max-w-2xl mx-auto">Clear agreements protecting both property owners and contractor prior to job commencement.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-xs text-gray-300">
+                <div class="bg-brand-dark/90 p-5 rounded-2xl border border-white/10">
+                    <div class="text-brand-electric font-bold text-sm mb-2"><i class="fa-solid fa-shield-halved mr-1"></i> Minimum Service Charge</div>
+                    <p class="leading-relaxed">$50–$75 minimum charge for routine property visits; higher minimums apply for emergency or after-hours call-out dispatch.</p>
+                </div>
+
+                <div class="bg-brand-dark/90 p-5 rounded-2xl border border-white/10">
+                    <div class="text-brand-electric font-bold text-sm mb-2"><i class="fa-solid fa-boxes-packing mr-1"></i> Materials & Extra Fees</div>
+                    <p class="leading-relaxed">Materials, mulch, salt/de-icer, dump fees, permits, parking, and special equipment rentals are extra unless explicitly stated in writing.</p>
+                </div>
+
+                <div class="bg-brand-dark/90 p-5 rounded-2xl border border-white/10">
+                    <div class="text-brand-electric font-bold text-sm mb-2"><i class="fa-solid fa-file-signature mr-1"></i> Scope Confirmation</div>
+                    <p class="leading-relaxed">All quotes confirm whether pricing is per visit, per hour, per storm, per season, or for the entire project scope.</p>
+                </div>
+
+                <div class="bg-brand-dark/90 p-5 rounded-2xl border border-white/10">
+                    <div class="text-brand-electric font-bold text-sm mb-2"><i class="fa-solid fa-snowflake mr-1"></i> Snowfall Triggers</div>
+                    <p class="leading-relaxed">Snow agreements specify snowfall triggers, areas cleared, de-icer inclusion, and repeat visit charges during ongoing storms.</p>
+                </div>
+
+                <div class="bg-brand-dark/90 p-5 rounded-2xl border border-white/10">
+                    <div class="text-brand-electric font-bold text-sm mb-2"><i class="fa-solid fa-camera mr-1"></i> Photo Documentation</div>
+                    <p class="leading-relaxed">Before-and-after photos are recorded. Approval in writing is required before executing any extra work or price adjustment.</p>
+                </div>
+
+                <div class="bg-brand-dark/90 p-5 rounded-2xl border border-white/10">
+                    <div class="text-brand-electric font-bold text-sm mb-2"><i class="fa-solid fa-clock mr-1"></i> 24/7 Service Policy</div>
+                    <p class="leading-relaxed">24/7 availability means requests can be received anytime. Dispatch depends on weather conditions and road safety during severe storms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STICKY MOBILE CALL BAR -->
+    <div class="fixed bottom-0 inset-x-0 bg-brand-dark/95 border-t border-brand-electric/40 p-3 flex items-center justify-between sm:hidden z-50 backdrop-blur-md no-print">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full icon-emblem flex items-center justify-center text-brand-electric text-sm">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+                <span class="text-[10px] font-bold text-gray-400 uppercase block">Jamille Diggins</span>
+                <span class="font-display font-bold text-sm text-white">267-521-7346</span>
+            </div>
+        </div>
+        <a href="tel:2675217346" class="btn-metallic text-white font-extrabold px-4 py-2 rounded-xl text-xs uppercase">
+            Call Now
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-8 px-4 text-center text-xs text-gray-500 border-t border-white/10">
+        <p class="font-display font-bold text-gray-300 text-sm mb-1">MILLI DOES IT LANDSCAPE & SNOW REMOVAL</p>
+        <p class="mb-3">Jamille Diggins | 267-521-7346 | jamillediggins@gmail.com</p>
+        <p>&copy; <span id="year"></span> Milli Does It. All rights reserved. Servicing Philadelphia & Surrounding Areas.</p>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPT LOGIC -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        let cart = [];
+
+        function addToCart(title, minP, maxP) {
+            const idx = cart.findIndex(item => item.title === title);
+            if (idx === -1) {
+                cart.push({ title, minP, maxP });
+            }
+            recalculate();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            recalculate();
+        }
+
+        function clearCart() {
+            cart = [];
+            document.getElementById('chk-emergency').checked = false;
+            document.getElementById('chk-materials').checked = false;
+            document.getElementById('cust-name').value = '';
+            document.getElementById('cust-address').value = '';
+            recalculate();
+        }
+
+        function recalculate() {
+            const listContainer = document.getElementById('side-cart-list');
+            const badge = document.getElementById('side-cart-badge');
+            const tabBadge = document.getElementById('tab-cart-count');
+            const totalDisplay = document.getElementById('side-total-range');
+
+            badge.textContent = `${cart.length} Items`;
+            tabBadge.textContent = cart.length;
+
+            if (cart.length === 0) {
+                listContainer.innerHTML = `<p class="text-gray-500 italic text-center py-6">Click "+ Add" on any service to start your live estimate.</p>`;
+                totalDisplay.textContent = '$0.00';
+                return;
+            }
+
+            let html = '';
+            let minSum = 0;
+            let maxSum = 0;
+
+            cart.forEach((item, index) => {
+                minSum += item.minP;
+                maxSum += item.maxP;
+
+                html += `
+                    <div class="flex items-center justify-between bg-white/5 p-2 rounded-lg border border-white/5">
+                        <div class="truncate pr-2">
+                            <span class="font-bold text-white block truncate">${item.title}</span>
+                            <span class="text-[10px] text-brand-electric font-display">$${item.minP}–$${item.maxP}</span>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-red-400 hover:text-red-300 p-1">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>`;
+            });
+
+            listContainer.innerHTML = html;
+
+            // Extra adjustments
+            const isEmergency = document.getElementById('chk-emergency').checked;
+            const isMaterials = document.getElementById('chk-materials').checked;
+
+            if (isMaterials) {
+                minSum += 50;
+                maxSum += 100;
+            }
+
+            if (isEmergency) {
+                minSum *= 1.25;
+                maxSum *= 1.25;
+            }
+
+            totalDisplay.textContent = `$${Math.round(minSum)}–$${Math.round(maxSum)}`;
+        }
+
+        function switchTab(tab) {
+            // Reset tab styles
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-electric', 'text-brand-dark', 'font-black');
+                btn.classList.add('bg-brand-card', 'text-gray-300');
+            });
+
+            const activeBtn = document.getElementById(`tab-${tab}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-brand-card', 'text-gray-300');
+                activeBtn.classList.add('bg-brand-electric', 'text-brand-dark', 'font-black');
+            }
+
+            // Show / hide sections
+            const groups = {
+                lawn: document.getElementById('sec-lawn'),
+                landscaping: document.getElementById('sec-landscaping'),
+                snow: document.getElementById('sec-snow'),
+                maint: document.getElementById('sec-maint')
+            };
+
+            if (tab === 'all') {
+                Object.values(groups).forEach(g => g.style.display = 'block');
+            } else if (tab === 'worksheet') {
+                Object.values(groups).forEach(g => g.style.display = 'block');
+                document.getElementById('worksheet-section').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                Object.keys(groups).forEach(key => {
+                    groups[key].style.display = (key === tab) ? 'block' : 'none';
+                });
+            }
+        }
+
+        function sendSMS() {
+            const cust = document.getElementById('cust-name').value || 'Customer';
+            const addr = document.getElementById('cust-address').value || 'Address';
+            const total = document.getElementById('side-total-range').textContent;
+            
+            const services = cart.map(i => i.title).join(', ');
+            const body = `Hi Mil! Estimate request for ${cust} at ${addr}. Services: ${services || 'General inquiry'}. Est Total: ${total}`;
+            
+            window.location.href = `sms:2675217346?body=${encodeURIComponent(body)}`;
+        }
+
+        function sendEmail() {
+            const cust = document.getElementById('cust-name').value || 'Customer';
+            const addr = document.getElementById('cust-address').value || 'Address';
+            const total = document.getElementById('side-total-range').textContent;
+            
+            const services = cart.map(i => i.title).join(', ');
+            const subject = `Milli Does It Estimate Request: ${cust}`;
+            const body = `Milli Does It Estimate Request\n\nCustomer: ${cust}\nAddress: ${addr}\nServices Requested: ${services || 'None selected'}\nEstimated Price Range: ${total}\n\nPlease confirm scope and written quote.`;
+            
+            window.location.href = `mailto:jamillediggins@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+    </script>
+</body>
+</html>
